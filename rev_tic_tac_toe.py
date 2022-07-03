@@ -241,11 +241,11 @@ def main():
     show_board(board)
     while not loss(board):
         if queue == human:
-            hod = human_step(board, human)
-            board[hod] = human
+            step = human_step(board, human)
+            board[step] = human
         else:
-            hod = comp_step(board, comp, human)
-            board[hod] = comp
+            step = comp_step(board, comp, human)
+            board[step] = comp
         show_board(board)
         queue = next_turn(queue)
     loser = loss(board)
