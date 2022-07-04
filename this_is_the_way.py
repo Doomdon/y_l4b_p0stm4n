@@ -1,5 +1,7 @@
-import numpy as np
-from python_tsp.exact import solve_tsp_dynamic_programming
+import numpy as np                                          #pip install numpy
+from python_tsp.exact import solve_tsp_dynamic_programming  #pip install python-tsp
+
+
 
 point_one = (0, 2)
 point_two = (2, 5)
