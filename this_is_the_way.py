@@ -1,5 +1,7 @@
-import numpy as np
-from python_tsp.exact import solve_tsp_dynamic_programming
+import numpy as np                                          #pip install numpy
+from python_tsp.exact import solve_tsp_dynamic_programming  #pip install python-tsp
+
+
 
 point_one = (0, 2)
 point_two = (2, 5)
@@ -52,3 +54,4 @@ print(str(point_one) + " > " + str(point_two), str(one_two)
       + " > " + str(point_five), str(four_five)
       + " > " + str(point_three), str(three_five)
       + " > " + str(point_one), str(one_three) + " =", distance, path)
+#(0, 2) > (2, 5) 3.605551275463989 > (6, 6) 4.123105625617661 > (8, 3) 3.605551275463989 > (5, 2) 3.1622776601683795 > (0, 2) 5.0 = 19.49648583671402 [0, 1, 3, 4, 2]
