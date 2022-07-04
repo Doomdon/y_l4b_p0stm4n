@@ -75,7 +75,7 @@ def distance_two_points(point_one, point_two):
 def this_is_the_way(first_point, last_point, points, res, res_way_size):
     if len(points) == 0:
         way_size = distance_two_points(last_point, first_point)
-        res.append((first_point,way_size))
+        res.append((first_point, way_size))
         res_way_size += way_size
         return res_way_size, res
     else:
@@ -91,7 +91,7 @@ def this_is_the_way(first_point, last_point, points, res, res_way_size):
 
 def result(points):
     res = this_is_the_way(points[0], points[0], points[1:], [], 0)
-    print(f'{points[0]}', end="")
+    print(str(points[0]), end="")
 
     for i, k in res[1]:
         print(' > ' + str(i) + ' ' + str(k), end='')
