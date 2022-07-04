@@ -53,7 +53,13 @@ def who_x_0():
 def number_steps(low, high):
     answer = None
     while answer not in range(low, high):
-        answer = int(input("Делай свой ход - введи номер поля (0-99): "))
+        try:
+            answer = int(input("Делай свой ход - введи номер поля (0-99): "))
+        except ValueError:
+            print('Ты ввел не число. Попробуй снова мэн)')
+            continue
+
+
     return answer
 
 
