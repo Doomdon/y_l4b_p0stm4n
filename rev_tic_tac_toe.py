@@ -13,7 +13,7 @@ def description():
     print('''
 Привет! Это "Обратные Крестики-нолики".
 Для того, чтобы сделать ход, нужно выбрать и ввести номер нужного поля:
-
+-----------------------------------------------
  0 |  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9
 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 
 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29
@@ -24,7 +24,7 @@ def description():
 70 | 71 | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79
 10 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88 | 89
 90 | 91 | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99
-
+-----------------------------------------------
 
 ''')
 
@@ -64,53 +64,49 @@ def number_steps(low, high):
 
 
 def new_board():
-    board = []
+    brd = []
     for i in range(board_size):
-        board.append(steps)
-    return board
+        brd.append(steps)
+    return brd
 
 
-def show_board(board):
-    print('\n', board[0], '|', board[1], '|', board[2], '|', board[3], '|', board[4], '|', board[5], '|', board[6], '|',
-          board[7], '|', board[8], '|', board[9])
-    print('----------------------------------------')
-    print('\n', board[10], '|', board[11], '|', board[12], '|', board[13], '|', board[14], '|', board[15], '|',
-          board[16], '|', board[17], '|', board[18], '|', board[19])
-    print('----------------------------------------')
-    print('\n', board[20], '|', board[21], '|', board[22], '|', board[23], '|', board[24], '|', board[25], '|',
-          board[26], '|', board[27], '|', board[28], '|', board[29])
-    print('----------------------------------------')
-    print('\n', board[30], '|', board[31], '|', board[32], '|', board[33], '|', board[34], '|', board[35], '|',
-          board[36], '|', board[37], '|', board[38], '|', board[39])
-    print('----------------------------------------')
-    print('\n', board[40], '|', board[41], '|', board[42], '|', board[43], '|', board[44], '|', board[45], '|',
-          board[46], '|', board[47], '|', board[48], '|', board[49])
-    print('----------------------------------------')
-    print('\n', board[50], '|', board[51], '|', board[52], '|', board[53], '|', board[54], '|', board[55], '|',
-          board[56], '|', board[57], '|', board[58], '|', board[59])
-    print('----------------------------------------')
-    print('\n', board[60], '|', board[61], '|', board[62], '|', board[63], '|', board[64], '|', board[65], '|',
-          board[66], '|', board[67], '|', board[68], '|', board[69])
-    print('----------------------------------------')
-    print('\n', board[70], '|', board[71], '|', board[72], '|', board[73], '|', board[74], '|', board[75], '|',
-          board[76], '|', board[77], '|', board[78], '|', board[79])
-    print('----------------------------------------')
-    print('\n', board[80], '|', board[81], '|', board[82], '|', board[83], '|', board[84], '|', board[85], '|',
-          board[86], '|', board[87], '|', board[88], '|', board[89])
-    print('----------------------------------------')
-    print('\n', board[90], '|', board[91], '|', board[92], '|', board[93], '|', board[94], '|', board[95], '|',
-          board[96], '|', board[97], '|', board[98], '|', board[99], '\n')
+def show_board(brd):
+    print(f''' 
+----------------------------------------------
+ {brd[0]} |  {brd[1]} | {brd[2]} |  {brd[3]} |  {brd[4]} |  {brd[5]} |  {brd[6]} |  {brd[7]} |  {brd[8]} |  {brd[9]}
+----------------------------------------------
+ {brd[10]} |  {brd[11]} | {brd[12]} |  {brd[13]} |  {brd[14]} |  {brd[15]} |  {brd[16]} |  {brd[17]} |  {brd[18]} |  {brd[19]} 
+----------------------------------------------
+ {brd[20]} |  {brd[21]} | {brd[22]} |  {brd[23]} |  {brd[24]} |  {brd[25]} |  {brd[26]} |  {brd[27]} |  {brd[28]} |  {brd[29]}
+----------------------------------------------
+ {brd[30]} |  {brd[31]} | {brd[32]} |  {brd[33]} |  {brd[34]} |  {brd[35]} |  {brd[36]} |  {brd[37]} |  {brd[38]} |  {brd[39]}
+----------------------------------------------
+ {brd[40]} |  {brd[41]} | {brd[42]} |  {brd[43]} |  {brd[44]} |  {brd[45]} |  {brd[46]} |  {brd[47]} |  {brd[48]} |  {brd[49]}
+----------------------------------------------
+ {brd[50]} |  {brd[51]} | {brd[52]} |  {brd[53]} |  {brd[54]} |  {brd[55]} |  {brd[56]} |  {brd[57]} |  {brd[58]} |  {brd[59]}
+----------------------------------------------
+ {brd[60]} |  {brd[61]} | {brd[62]} |  {brd[63]} |  {brd[64]} |  {brd[65]} |  {brd[66]} |  {brd[67]} |  {brd[68]} |  {brd[69]}
+----------------------------------------------
+ {brd[70]} |  {brd[71]} | {brd[72]} |  {brd[73]} |  {brd[74]} |  {brd[75]} |  {brd[76]} |  {brd[77]} |  {brd[78]} |  {brd[79]}
+----------------------------------------------
+ {brd[80]} |  {brd[81]} | {brd[82]} |  {brd[83]} |  {brd[84]} |  {brd[85]} |  {brd[86]} |  {brd[87]} |  {brd[88]} |  {brd[89]}
+----------------------------------------------
+ {brd[90]} |  {brd[91]} | {brd[92]} |  {brd[93]} |  {brd[94]} |  {brd[95]} |  {brd[96]} |  {brd[97]} |  {brd[98]} |  {brd[99]}
+----------------------------------------------
+
+    ''')
 
 
-def free_moves(board):
+
+def free_moves(brd):
     free_moves = []
     for i in range(board_size):
-        if board[i] == steps:
+        if brd[i] == steps:
             free_moves.append(i)
     return free_moves
 
 
-def loss(board):
+def loss(brd):
     VAR_LOSS = (tuple(range(5)), tuple(range(1, 6)), tuple(range(2, 7)), tuple(range(3, 8)), tuple(range(4, 9)),
                 tuple(range(5, 10)),
                 tuple(range(20, 26)), tuple(range(22, 27)), tuple(range(23, 28)), tuple(range(24, 29)),
@@ -177,17 +173,17 @@ def loss(board):
 
     def func(var):
         for i in var:
-            if board[i[0]] == board[i[1]] == board[i[2]] == board[i[3]] == board[i[4]] != steps:
-                loss = board[i[0]]
+            if brd[i[0]] == brd[i[1]] == brd[i[2]] == brd[i[3]] == brd[i[4]] != steps:
+                loss = brd[i[0]]
                 return loss
-            if steps not in board:
+            if steps not in brd:
                 return NICHYA
         return None
     return func(VAR_LOSS)
 
 
-def human_step(board, human):
-    free = free_moves(board)
+def human_step(brd, human):
+    free = free_moves(brd)
     step = None
     while step not in free:
         step = number_steps(0, board_size)
@@ -196,24 +192,24 @@ def human_step(board, human):
     return step
 
 
-def comp_step(board, comp, human):
-    board = board[:]
+def comp_step(brd, comp, human):
+    brd = brd[:]
     print('Мой ход: ')
-    for i in free_moves(board):
+    for i in free_moves(brd):
         i = random.randint(0, 99)
         return i
-        board[i] = comp
-        if winner(board) == comp:
+        brd[i] = comp
+        if winner(brd) == comp:
             print(i)
             return i
-        board[i] = steps
-    for j in free_moves(board):
-        board[j] = human
-        if winner(board) == human:
+        brd[i] = steps
+    for j in free_moves(brd):
+        brd[j] = human
+        if winner(brd) == human:
             print(j)
             return j
-        board[j] = steps
-    for k in free_moves(doska):
+        brd[j] = steps
+    for k in free_moves(brd):
         print(k)
         return k
 
@@ -253,18 +249,18 @@ def main():
     human: str
     comp, human = who_x_0()
     queue = X
-    board = new_board()
-    show_board(board)
-    while not loss(board):
+    brd = new_board()
+    show_board(brd)
+    while not loss(brd):
         if queue == human:
-            step = human_step(board, human)
-            board[step] = human
+            step = human_step(brd, human)
+            brd[step] = human
         else:
-            step = comp_step(board, comp, human)
-            board[step] = comp
-        show_board(board)
+            step = comp_step(brd, comp, human)
+            brd[step] = comp
+        show_board(brd)
         queue = next_turn(queue)
-    loser = loss(board)
+    loser = loss(brd)
     who_loss(loser, comp, human)
     ques()
 
