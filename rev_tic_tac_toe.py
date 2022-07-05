@@ -50,13 +50,28 @@ def who_x_0():
 
 
 def number_steps(low, high):
+    descrip = 'Ты ввел не то, что нужно. Попробуй снова мэн)'
     answer = None
     while answer not in range(low, high):
         try:
             answer = int(input("Делай свой ход - введи номер поля (0-99): "))
-        except ValueError:
-            print('Ты ввел не число. Попробуй снова мэн)')
+            a = list(range(0, 99))
+            for i in a:
+                if answer > i:
+                    print(descrip)
+                    break
+                elif answer < i:
+                    print(descrip)
+                    break
             continue
+        except ValueError:
+            print(descrip)
+            continue
+        # except TypeError:
+        #     print('Ты ввел не то, что нужно. Попробуй снова мэн)')
+        #     continue
+
+
 
 
     return answer
