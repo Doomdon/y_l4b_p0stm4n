@@ -279,7 +279,7 @@ def main():
         who_loss(loser, comp, human)
         ques()
     except KeyboardInterrupt:
-        print("\n\nBye-bye")
+        print("\n\n\nBye-bye!!!")
 
 
 
