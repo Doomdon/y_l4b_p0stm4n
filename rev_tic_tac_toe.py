@@ -238,6 +238,17 @@ def who_loss(loser, comp, human):
         print(NICHYA)
 
 
+def ques():
+    answer = None
+    while answer not in ('да', 'нет'):
+        answer = input('Сыграть еще раз?').lower()
+        if answer == 'да':
+            main()
+        else:
+            continue
+
+
+
 def main():
     description()
     human: str
@@ -256,6 +267,8 @@ def main():
         queue = next_turn(queue)
     loser = loss(board)
     who_loss(loser, comp, human)
+    ques()
+
 
 
 main()
