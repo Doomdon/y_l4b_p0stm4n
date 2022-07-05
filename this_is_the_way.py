@@ -3,20 +3,14 @@
 # import numpy as np                                          #pip install numpy
 # from python_tsp.exact import solve_tsp_dynamic_programming  #pip install python-tsp
 
-
 # point_one = (0, 2)
 # point_two = (2, 5)
 # point_three = (5, 2)
 # point_four = (6, 6)
 # point_five = (8, 3)
-#
-#
+
 # def distance_two_points(point_1, point_2):
 #     return ((point_2[0] - point_1[0]) ** 2 + (point_2[1] - point_1[1]) ** 2) ** 0.5
-#
-#
-# def result():
-#     pass
 
 
 # one_two = distance_two_points(point_one, point_two)
@@ -30,16 +24,6 @@
 # three_five = distance_two_points(point_three, point_five)
 # four_five = distance_two_points(point_four, point_five)
 
-# print(one_two)
-# print(one_three)
-# print(one_four)
-# print(one_five)
-# print(two_three)
-# print(two_four)
-# print(two_five)
-# print(three_four)
-# print(three_five)
-# print(four_five)
 
 # distance_matrix = np.array([[0, one_two, one_three, one_four, one_five],
 #                             [one_two, 0, two_three, two_four, two_five],
