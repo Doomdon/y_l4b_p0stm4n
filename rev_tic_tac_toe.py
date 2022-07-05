@@ -248,7 +248,6 @@ def ques():
             continue
 
 
-
 def main():
     description()
     human: str
