@@ -44,7 +44,6 @@ def who_x_0():
         human = X
         comp = O
     else:
-        print('Ход компьютера')
         human = O
         comp = X
     return comp, human
@@ -194,7 +193,7 @@ def human_step(brd, human):
 
 def comp_step(brd, comp, human):
     brd = brd[:]
-    print('Мой ход: ')
+    print('Ходит железяка: ')
     for i in free_moves(brd):
         i = random.randint(0, 99)
         return i
