@@ -213,13 +213,13 @@ def comp_step(brd, comp, human):
         i = random.randint(0, 99)
         return i
         brd[i] = comp
-        if winner(brd) == comp:
+        if loss(brd) == comp:
             print(i)
             return i
         brd[i] = steps
     for j in free_moves(brd):
         brd[j] = human
-        if winner(brd) == human:
+        if loss(brd) == human:
             print(j)
             return j
         brd[j] = steps
