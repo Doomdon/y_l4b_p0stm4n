@@ -237,7 +237,7 @@ def who_loss(loser, comp, human):
 def ques():
     answer = None
     while answer not in ('да', 'нет'):
-        answer = input('Сыграть еще раз?').lower()
+        answer = input('Сыграть еще раз?(да/нет)').lower()
         if answer == 'да':
             main()
         else:
