@@ -67,9 +67,9 @@ def number_steps(low, high):
         except ValueError:
             print(descrip)
             continue
-        # except TypeError:
-        #     print('Ты ввел не то, что нужно. Попробуй снова мэн)')
-        #     continue
+
+
+
 
 
 
@@ -259,24 +259,28 @@ def ques():
 
 
 def main():
-    description()
-    human: str
-    comp, human = who_x_0()
-    queue = X
-    brd = new_board()
-    show_board(brd)
-    while not loss(brd):
-        if queue == human:
-            step = human_step(brd, human)
-            brd[step] = human
-        else:
-            step = comp_step(brd, comp, human)
-            brd[step] = comp
+    try:
+        description()
+        human: str
+        comp, human = who_x_0()
+        queue = X
+        brd = new_board()
         show_board(brd)
-        queue = next_turn(queue)
-    loser = loss(brd)
-    who_loss(loser, comp, human)
-    ques()
+        while not loss(brd):
+            if queue == human:
+                step = human_step(brd, human)
+                brd[step] = human
+            else:
+                step = comp_step(brd, comp, human)
+                brd[step] = comp
+            show_board(brd)
+            queue = next_turn(queue)
+        loser = loss(brd)
+        who_loss(loser, comp, human)
+        ques()
+    except KeyboardInterrupt:
+        print("\n\nBye-bye")
+
 
 
 
