@@ -55,14 +55,10 @@ def number_steps(low, high):
     while answer not in range(low, high):
         try:
             answer = int(input("Делай свой ход - введи номер поля (0-99): "))
-            a = list(range(0, 99))
-            for i in a:
-                if answer > i:
+            if answer < 0:
+                print(descrip)
+            if answer > 99:
                     print(descrip)
-                    break
-                elif answer < i:
-                    print(descrip)
-                    break
             continue
         except ValueError:
             print(descrip)
@@ -207,25 +203,37 @@ def human_step(brd, human):
 
 
 def comp_step(brd, comp, human):
+    free = free_moves(brd)
     brd = brd[:]
     print('Ходит железяка: ')
-    for i in free_moves(brd):
+    i = None
+
+    while i not in free:
         i = random.randint(0, 99)
-        return i
-        brd[i] = comp
-        if loss(brd) == comp:
-            print(i)
-            return i
-        brd[i] = steps
-    for j in free_moves(brd):
-        brd[j] = human
-        if loss(brd) == human:
-            print(j)
-            return j
-        brd[j] = steps
-    for k in free_moves(brd):
-        print(k)
-        return k
+        print(f"ход {i} ")
+        if i not in free:
+            print(f"ход {i} Поле уже занято!!!")
+        continue
+
+    return i
+
+    # brd[i] = comp
+
+
+
+    #     if loss(brd) == comp:
+    #         print(i)
+    #         return i
+    #     brd[i] = steps
+    # for j in free_moves(brd):
+    #     brd[j] = human
+    #     if loss(brd) == human:
+    #         print(j)
+    #         return j
+    #     brd[j] = steps
+    # for k in free_moves(brd):
+    #     print(k)
+    #     return k
 
 
 def next_turn(queue):
